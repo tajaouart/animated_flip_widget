@@ -1,5 +1,5 @@
 name: animated_flip_widget
-description: A new Flutter package project.
+description: Animated Flip Card is a Flutter package for creating a flipping card animation with customizable front and back widgets, and various options for clickability, flip duration, and flip direction. It is simple to use and can be easily integrated into any project.
 version: 0.0.1
 homepage: https://github.com/tajaouart/animated_flip_widget
 
