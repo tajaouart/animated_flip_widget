@@ -1,39 +1,69 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
-
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+# Animated Flip Card
+A Flutter package that creates an animation of a flipping card.
 
 ## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- Creates an animation of a flipping card
+- Allows you to display different widgets on the front and back of the card
+- Includes a `FlipController` class to control the animation of the flip
+- Allows you to specify whether the card should be clickable or not
+- Allows you to specify the duration of the flipping animation
+- Allows you to specify the direction of the flipping animation (horizontal or vertical)
 
 ## Getting started
+To use this package, add `animated_flip_card` as a dependency in your `pubspec.yaml` file.
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+```yaml
+dependencies:
+animated_flip_card: <latest version>
+```
 
 ## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+To use the `AnimatedFlipWidget`, you must pass in three required parameters: `front`, `back`, and `controller`.
 
 ```dart
-const like = 'sample';
+AnimatedFlipWidget(
+  front: Text('Front'),
+  back: Text('Back'),
+  controller: _controller,
+)
+```
+
+
+## Usage
+To use the `AnimatedFlipWidget`, you must pass in three required parameters: `front`, `back`, and `controller`.
+
+```dart
+AnimatedFlipWidget(
+  front: Text('Front'),
+  back: Text('Back'),
+  controller: _controller,
+)
+```
+
+You can also specify the optional parameters:
+
+```dart
+AnimatedFlipWidget(
+  front: Text('Front'),
+  back: Text('Back'),
+  controller: _controller,
+  clickable: true,
+  flipDuration: Duration(milliseconds: 600),
+  flipDirection: FlipDirection.Horizontal,
+)
+```
+
+You can control the animation of the flip by calling the flip() method on the FlipController instance.
+
+```dart
+_controller.flip();
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+- This package uses the `TweenAnimationBuilder` widget to build a tween animation that rotates the card based on the angle of the `controller`.
+- It also has an `enum` class `FlipDirection` that allows you to define the direction of flipping horizontally or vertically.
+- A sample project demonstrating how to use the package is available in the `example` directory of this package
+
+
+
