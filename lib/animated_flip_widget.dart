@@ -1,7 +1,4 @@
 library animated_flip_widget;
 
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'animated_flip_widget/flip_controler.dart';
+export 'animated_flip_widget/flip_widget.dart';

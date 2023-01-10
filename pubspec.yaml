@@ -1,7 +1,7 @@
 name: animated_flip_widget
 description: A new Flutter package project.
 version: 0.0.1
-homepage:
+homepage: https://github.com/tajaouart/animated_flip_widget
 
 environment:
   sdk: '>=2.18.6 <3.0.0'
