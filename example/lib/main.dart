@@ -30,7 +30,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final controller = FlipController();
-  FlipDirection direction = FlipDirection.Vertical;
+  FlipDirection direction = FlipDirection.vertical;
 
   @override
   Widget build(BuildContext context) {
@@ -49,9 +49,9 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
           FloatingActionButton(
             onPressed: () {
-              if (direction == FlipDirection.Vertical) {
+              if (direction == FlipDirection.vertical) {
                 setState(() {
-                  direction = FlipDirection.Horizontal;
+                  direction = FlipDirection.horizontal;
                 });
               }
 
@@ -67,9 +67,9 @@ class _MyHomePageState extends State<MyHomePage> {
             quarterTurns: 1,
             child: FloatingActionButton(
               onPressed: () {
-                if (direction == FlipDirection.Horizontal) {
+                if (direction == FlipDirection.horizontal) {
                   setState(() {
-                    direction = FlipDirection.Vertical;
+                    direction = FlipDirection.vertical;
                   });
                 }
 

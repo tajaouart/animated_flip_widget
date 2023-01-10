@@ -45,7 +45,7 @@ class AnimatedFlipWidget extends StatelessWidget {
     required this.controller,
     this.clickable = true,
     this.flipDuration = const Duration(milliseconds: 400),
-    this.flipDirection = FlipDirection.Vertical,
+    this.flipDirection = FlipDirection.vertical,
     Key? key,
   }) : super(key: key);
 
@@ -92,10 +92,10 @@ class AnimatedFlipWidget extends StatelessWidget {
               final transform = Matrix4.identity()..setEntry(3, 2, 0.001);
 
               switch (flipDirection) {
-                case FlipDirection.Vertical:
+                case FlipDirection.vertical:
                   transform.rotateX(value);
                   break;
-                case FlipDirection.Horizontal:
+                case FlipDirection.horizontal:
                   transform.rotateY(value);
               }
 
@@ -108,8 +108,8 @@ class AnimatedFlipWidget extends StatelessWidget {
                         alignment: Alignment.center,
                         transform: Matrix4.identity()
                           ..rotateX(
-                              flipDirection == FlipDirection.Vertical ? pi : 0)
-                          ..rotateY(flipDirection == FlipDirection.Horizontal
+                              flipDirection == FlipDirection.vertical ? pi : 0)
+                          ..rotateY(flipDirection == FlipDirection.horizontal
                               ? pi
                               : 0),
                         child: back,
@@ -122,4 +122,3 @@ class AnimatedFlipWidget extends StatelessWidget {
     );
   }
 }
-
